@@ -1,8 +1,8 @@
 # ETSP
 References
-- Dataset | [VisText](https://vis.csail.mit.edu/pubs/vistext/)
-- Model | [Pix2Struct](https://www.semanticscholar.org/paper/Pix2Struct%3A-Screenshot-Parsing-as-Pretraining-for-Lee-Joshi/e1484706c0fab932fc9804df328044b3cb2f110d)
-- Evaluation | [Chart-to-Text](https://aclanthology.org/2022.acl-long.277/)
+- Dataset | [VisText:Paper](https://vis.csail.mit.edu/pubs/vistext/), [VisText:Code](https://github.com/mitvis/vistext)
+- Model | [Pix2Struct:Paper](https://www.semanticscholar.org/paper/Pix2Struct%3A-Screenshot-Parsing-as-Pretraining-for-Lee-Joshi/e1484706c0fab932fc9804df328044b3cb2f110d)
+- Evaluation | [Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), [Chart-to-Text:Code](https://github.com/vis-nlp/chart-to-text)  
 - Overleaf | [FinalReport](https://www.overleaf.com/project/651c62028a734f8fcdff171a)
 
 Tasks
