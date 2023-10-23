@@ -1,6 +1,6 @@
-# ETSP
+# Essentials to Text and Speech Processing
 References
-- Dataset | [VisText:Paper](https://vis.csail.mit.edu/pubs/vistext/), [VisText:Code](https://github.com/mitvis/vistext)
+- Dataset | Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), [Chart-to-Text:Code](https://github.com/vis-nlp/chart-to-text)  
 - Model | [Pix2Struct:Paper](https://www.semanticscholar.org/paper/Pix2Struct%3A-Screenshot-Parsing-as-Pretraining-for-Lee-Joshi/e1484706c0fab932fc9804df328044b3cb2f110d)
 - Evaluation | [Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), [Chart-to-Text:Code](https://github.com/vis-nlp/chart-to-text)  
 - Overleaf | [FinalReport](https://www.overleaf.com/project/651c62028a734f8fcdff171a), [ProposalReport](https://www.overleaf.com/project/650770dd956cfc29aeca120d)
@@ -8,14 +8,14 @@ References
 
 # Comprehensive Data Visualization and Model Training Repository
 
-This repository is a one-stop resource for training a pix2struct model, evaluating its performance, and diving into versatile data visualizations with the GraphSay class, which forms the basis for an upcoming visualization library.
+This repository is a one-stop resource for finetuning Google's Pix2struct model, evaluating its performance on a custom dataset derived from [Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), and diving into charts' caption generation via GraphSay class, which forms the basis for an upcoming Chart-Captioning library.
 
 ## Repository Structure
 
 - `dataset/`: Contains the datasets required for training and evaluating the model.
-- `training/`: Includes resources and guidelines for training the pix2struct model.
+- `training/`: Includes resources and guidelines for finetuning  Google's Pix2struct model.
 - `evaluation/`: Provides tools for evaluating the trained model and analyzing its performance.
-- `library/`: Introduces the GraphSay class with use cases, setting the stage for a future comprehensive visualization library.
+- `library/`: Introduces the GraphSay class with use cases, setting the stage for a future chart captioning library.
 
 ## Training the Model
 
@@ -31,7 +31,7 @@ Once your model is trained, you can evaluate its performance using the resources
 
 ## GraphSay: Towards a Comprehensive Visualization Library
 
-The `library/` directory is dedicated to the GraphSay class, showcasing its capabilities and potential as the foundation for a future library. Explore various use cases and visualizations supported by GraphSay in the interactive Python notebook provided.
+The `library/` directory is dedicated to the GraphSay class, showcasing its capabilities and potential as the foundation for a future library. Explore various use cases supported by GraphSay in the interactive Python notebook provided.
 
 [Read more about GraphSay](./library/README.md)
 
