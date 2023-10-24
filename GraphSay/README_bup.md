@@ -5,7 +5,7 @@ Here you can find use cases of the GraphSay class, a versatile powerhouse for da
 
 ## Exploring Use Cases
 
-The provided notebook, "GraphSay_UseCases.ipynb," is an interactive Python notebook that contains various use cases demonstrating the capabilities of the GraphSay class. 
+The provided notebook, `../example.ipynb,` is an interactive Python notebook that contains various use cases demonstrating the capabilities of the GraphSay class. 
 
 ### Getting Started
 
