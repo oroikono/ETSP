@@ -58,11 +58,13 @@ def train_val_test_data(metadata_path:str, total_n:int, seed:int) -> (pd.DataFra
 #################################################
 # Save metadata
 #################################################
-def save_metadata(df:pd.DataFrame, path_to_save:str) -> pd.DataFrame:
+def save_metadata(df:pd.DataFrame, path_to_save:str, update_file_name=False) -> pd.DataFrame:
 
     metadata = df[["imgPath", "first_caption", "chartType", "chartElement"]]
     metadata.iloc[:]["imgPath"] = metadata["imgPath"].map(lambda path: path.split("/")[-1])
     metadata.columns = ["file_name", "caption", "chartType", "chartElement"]
+    if update_file_name:
+        metadata.iloc[:]["file_name"] = metadata.iloc[:]['chartElement'].astype(str)+"_"+metadata.iloc[:]['file_name'].astype(str)
     metadata = metadata.reset_index(drop=True)
     metadata.head()
 
@@ -149,7 +151,7 @@ def no_grid_plot(data:pd.DataFrame, metadata:pd.Series, plot_type:str, not_showi
         plt.close()
     return fig
 
-def generate_single_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, is_verbose=False):
+def generate_single_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, update_chart_name=False, is_verbose=False):
 
     check_folder_exsit(path_to_save)
 
@@ -171,6 +173,8 @@ def generate_single_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, i
             new_dtype = data[data.columns[1]].dtype
             print(f"Not numeric column! Change {old_dtype} -> {new_dtype}")
 
+        if update_chart_name:
+            chart_name = f"{chart_element}_{chart_name}"
         chart_path = os.path.join(path_to_save, chart_name)
         if chart_element == "FullCover":
             fig = base_plot(data, item, plot_type=chart_type, not_showing=True)
@@ -232,7 +236,7 @@ def multi_subplot(data:pd.DataFrame, metadata:pd.Series, plot_type:str, not_show
         plt.close()
     return fig
 
-def generate_multi_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, is_verbose=False):
+def generate_multi_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, update_chart_name=False, is_verbose=False):
 
     check_folder_exsit(path_to_save)
 
@@ -254,7 +258,9 @@ def generate_multi_col_plot(df:pd.DataFrame, data_root:str, path_to_save:str, is
                 data[col] = pd.to_numeric(data[col],errors='coerce')
                 new_dtype = data[col].dtype
                 print(f"Not numeric column! Change {old_dtype} -> {new_dtype}")
-
+        
+        if update_chart_name:
+            chart_name = f"{chart_element}_{chart_name}"
         chart_path = os.path.join(path_to_save, chart_name)
         if chart_element == "OnePlot":
             fig = base_multi_plot(data, item, plot_type=chart_type, not_showing=True)
