@@ -1,6 +1,10 @@
 # GraphSay : A Python Library for Automated Graph Captioning
 
-This repository is a one-stop resource for finetuning Google's Pix2struct model[Pix2Struct:Paper](https://www.semanticscholar.org/paper/Pix2Struct%3A-Screenshot-Parsing-as-Pretraining-for-Lee-Joshi/e1484706c0fab932fc9804df328044b3cb2f110d), evaluating its performance on a custom dataset derived from [Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), and diving into charts' caption generation via GraphSay class, which forms the basis for an upcoming Chart-Captioning library.
+<p align="center">
+  <img src="https://github.com/oroikono/ETSP/blob/main/graphsay_logo_tmp.png" alt="Sublime's custom image" width="400"//>
+</p>
+
+This repository is a one-stop resource for finetuning Google's Pix2struct model[Pix2Struct:Paper](https://www.semanticscholar.org/paper/Pix2Struct%3A-Screenshot-Parsing-as-Pretraining-for-Lee-Joshi/e1484706c0fab932fc9804df328044b3cb2f110d), evaluating its performance on a custom dataset derived from [Chart-to-Text:Paper](https://aclanthology.org/2022.acl-long.277/), and diving into charts' caption generation via GraphSay class, which forms the basis for an upcoming Chart-Captioning library. Find samples [here](https://github.com/oroikono/ETSP/blob/main/evaluation/Examples%20of%20GraphSay%20Use-Cases.pdf)!
 
 ## Repository Structure
 
